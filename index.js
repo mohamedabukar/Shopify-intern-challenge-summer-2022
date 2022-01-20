@@ -18,17 +18,38 @@ const apiInfo = function(y){
 }
 
 async function marsApi(){
-    let x = await fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=10&api_key=" + apiKey)
+    let x = await fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=" + apiKey)
     let y = await x.json();
     console.log(y);
     apiDisplayer(y);
 }
 
 const apiDisplayer = function(y){
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 1000; i+= 50) {
+        // var x = document.createElement("div");
+        // var n = document.createTextNode(y.photos[i].earth_date); 
+        // x.appendChild(n);
+        // document.querySelector(".marsinfo").appendChild(x);
+        // var a = document.createElement("div");
+        // var b = document.createTextNode(y.photos[i].earth_date); 
+        // a.appendChild(b);
+        // document.querySelector(".marsinfo").appendChild();
+        // var x = document.createElement("div");
+        // var n = document.createTextNode(y.photos[i].earth_date); 
+        // x.appendChild(n);
+        // document.querySelector(".marsinfo").appendChild(x);
         var x = document.createElement("div");
-        var n = document.createTextNode(y.photos[i].earth_date); 
-        x.appendChild(n);
-        document.querySelector(".marsinfo").appendChild(x)
+        document.querySelector(".marsinfo").innerHTML += `
+        <div class="marscard">
+        <div class="title">
+                <h2 id="pictureTitle">${y.photos[i].camera.full_name}</h2>
+            </div>
+            <div class="date center">
+                <h2 id="pictureDate">${y.photos[i].earth_date}</h2>
+            </div>
+            <div class="image center">
+                <img src="${y.photos[i].img_src}" class="image" alt="image">
+            </div>
+        <div>`
     }
 }
