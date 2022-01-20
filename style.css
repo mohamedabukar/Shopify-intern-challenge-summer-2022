@@ -1,3 +1,12 @@
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa4x6H-56WbpENN4CIyIWefipINI6x7UpFfA&usqp=CAU");
+    background-size: 1500px 1500px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .card{
     margin-top: 30px;
     width: 300px;
@@ -6,6 +15,19 @@
     padding: 20px;
     border-style: solid;
     overflow-y: scroll;
+    border-radius: 10%;
+}
+.marscard{
+    margin-top: 30px;
+    width: 300px;
+    height: 350px;
+    background-color: blue;
+    padding: 20px;
+    border-style: solid;
+    overflow-y: scroll;
+    border-radius: 10%;
+    overflow-y: hidden;
+    margin: 10px;
 }
 ::-webkit-scrollbar{
     display: none;
