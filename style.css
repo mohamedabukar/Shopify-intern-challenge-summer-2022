@@ -43,3 +43,16 @@ h1{
 .center{
     text-align: center;
 }
+
+.btn{
+    border: 2px solid orange;
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    color: grey;
+}
+.btn i:hover{
+    cursor: pointer;
+}

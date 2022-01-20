@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6dcf461c1.js"></script>
     <title>Shopify Intern Challenge</title>
 </head>
 
@@ -15,6 +16,12 @@
     <div class="flex">
 
         <div class="card center">
+            <!-- <div class="heart-btn">
+                <div class="content">
+                    <span class="like">Like</span>
+                </div>
+            </div> -->
+            <button onclick="likeButton()" id="btn1" class="btn"><i class="fas fa-heart"></i></button>
             <h2 class="center">Scroll</h2>
             <div class="title">
                 <h2 id="pictureTitle"></h2>
@@ -29,7 +36,8 @@
                 <p id="nasaDescription"></p>
             </div>
         </div>
-        <div class="marsinfo flex"></div>
+        <div class="marsinfo flex ">
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
